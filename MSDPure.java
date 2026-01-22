@@ -42,8 +42,8 @@ public class MSDPure {
     }
 
     private static void insertionSort(String[] a, int lo, int hi, int d) {
-        for (int i = lo + 1; i <= hi; i++) {
-            for (int j = i; j > 0 && less(a[j], a[j - 1], d); j--) {
+        for (int i = lo; i <= hi; i++) {
+            for (int j = i; j > lo && less(a[j], a[j - 1], d); j--) {
                 String temp = a[j];
                 a[j] = a[j - 1];
                 a[j - 1] = temp;
@@ -52,14 +52,7 @@ public class MSDPure {
     }
 
     private static boolean less(String v, String w, int d) {
-        int i = d;
-        while (i < v.length() && i < w.length()) {
-            if (v.charAt(i) < w.charAt(i)) return true;
-            if (v.charAt(i) > w.charAt(i)) return false;
-            i++;
-        }
-
-        return v.length() < w.length();
+        return v.substring(d).compareTo(w.substring(d)) < 0;
     }
 
     public static void main(String[] args) {
