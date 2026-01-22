@@ -188,4 +188,38 @@ R = alphabet size
 
 ---
 
-## 3-way 
+## 3-way String Quicksort
+
+This algorithm makes use of the quick sorting technique to partition the input array into parts strictly less than the d character, equal to d character, and greater than d character. The algorithm runs from the right(MSD) to left.
+
+### How it works?
+
+1. Take the first string and find its true place by partitioning the array.
+
+2. 3 partitions are formed: group with character strictly less than dth character of the first string, strictly equal to the dth character and strictly greater than the dth character.
+
+3. Use recursion to sort the strings in different partitions.
+
+### Advantages
+
+- It is cache-efficient unlike MSD sort.
+
+- It is in-place.
+
+### Limitations 
+
+- It is not stable.
+
+### Complexity
+
+**Time Complexity**: 1.39 W N lg N
+**Space Complexity**: log N + W
+
+## Summary Comparison
+
+| Algorithm            | Direction    | Time Complexity                      | Space      | Stable? |
+| -------------------- | ------------ | ------------------------------------ | ---------- | ---------------- |
+| Key-Indexed Counting | N/A          | `O(N + R)`                           | `O(N + R)` | yes              |
+| LSD Radix Sort       | Right → Left | `O(WN)`                              | `O(N + R)` | yes             |
+| MSD Radix Sort       | Left → Right | Worst: `Θ(WN)`<br>Typical: much less | `O(N + R)` | yes             |
+| 3-way string Quicksort	|	Left -> Right	|	1.39 W N lg N Random: 1.39 N lg N	| log N + W	| no	|
