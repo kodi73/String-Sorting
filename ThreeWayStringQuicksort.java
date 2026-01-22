@@ -1,7 +1,8 @@
 package string;
 
 public class ThreeWayStringQuicksort {
-    private static void sort(String[] a) {
+    
+    public static void sort(String[] a) {
         sort(a, 0, a.length - 1, 0);
     }
 
