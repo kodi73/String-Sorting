@@ -67,6 +67,8 @@ In practice, when R ≪ N, this behaves as linear time.
 
 - 🔧 Foundation for radix sorts (LSD and MSD)
 
+---
+
 ## LSD Radix Sort (Least Significant Digit)
 
 LSD Radix Sort sorts strings by processing characters **from the rightmost (least significant) position to the leftmost (most significant) position.**
@@ -111,6 +113,8 @@ R = alphabet size
 - Data-independent performance
 
 - Simple and predictable
+
+---
 
 ## MSD Radix Sort (Most Significant Digit)
 
@@ -181,3 +185,7 @@ R = alphabet size
 - Examines only as many characters as needed
 
 - Often much faster than comparison-based sorts on real data
+
+---
+
+## 3-way 
